@@ -1,8 +1,12 @@
-precio_taco_maiz = 35.0
-precio_taco_harina = 45.0
+from db.dbFunctions import get_data_from_table
 
-tacos_maiz = int(input("Cuantos tacos de maiz quieres?"))
-tacos_harina = int(input("Cuantos tacos de harina quieres?"))
+def main():
+    datos = get_data_from_table()
+    if datos:
+        for fila in datos:
+            print(fila)
+    else:
+        print("No se encontraron datos.")
 
-print(f"Tacos de maiz:{tacos_maiz} y es un total:{precio_taco_maiz*tacos_maiz}")
-print(f"Tacos de harina:{tacos_harina}" y es un total:{precio_taco_harina*tacos_harina})
+if __name__ == "__main__":
+    main()

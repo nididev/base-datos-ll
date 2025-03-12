@@ -1,0 +1,8 @@
+# Ignorar la carpeta venv
+Practica1/venv/
+_pycache_/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3

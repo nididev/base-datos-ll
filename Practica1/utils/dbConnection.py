@@ -1,12 +1,12 @@
 import mysql.connector
 
-def get_connection():
+def pool():
     try:
         connection = mysql.connector.connect(
-            host="127.0.0.1",  # Cambia si usas otro host
-            user="nididev",  # Cambia por tu usuario de MySQL
-            password=".Nidiandiego08",  # Cambia por tu contraseña
-            database="biblioteca"  # Nombre de tu base de datos
+            host="127.0.0.1",  
+            user="nididev",  
+            password=".Nidiandiego08",  
+            database="biblioteca"  
         )
         return connection
     except mysql.connector.Error as err:
